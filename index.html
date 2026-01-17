@@ -12,8 +12,10 @@
 <body>
     
     <main>
-        
-        <h1>Ice Cream Order Form</h1>
+        <header>
+            <h1>Ice Cream Order Form</h1>
+        </header>
+
         <form id="ice-cream-form" action="#" method="get">
             
             <fieldset>
@@ -40,6 +42,7 @@
                 <option value="strawberry">Strawberry</option>
                 <option value="coffee">Coffee</option>
             </select>
+            <br>
 
             <!-- cone type -->
             <label for="wafflecone">
@@ -51,15 +54,26 @@
             <label for="cup">
                 <input type="radio" id="cup" value="cup" name="method">Cup                    
             </label>
+            <br>
                 
-            
-
+        
             <!-- toppings -->
-             
-            
-
+            <legend>Toppings</legend>
+            <label for="sprinkles">
+                <input type="checkbox" id="sprinkles" name="toppings[]" value="sprinkles">Sprinkles
+            </label>
+            <label for="nuts">
+                <input type="checkbox" id="nuts" name="toppings[]" value="nuts">Nuts
+            </label>
+            <label for="cherry">
+                <input type="checkbox" id="cherry" name="toppings[]" value="cherry">Cherry
+            </label>
+            <label for="whipped cream">
+                <input type="checkbox" id="whipped cream" name="toppings[]" value="whipped cream">Whipped Cream
+            </label>
+            <br>
             <!-- additional comments -->
-            <label for="comments">Additional comments</label>
+            <label for="comments">Additional comments:</label>
             <textarea rows="5" id="comments" name="comments"></textarea>
             </fieldset>
             <!-- submit button -->
