@@ -9,7 +9,7 @@ body {
 }
 
 fieldset {
-    text-decoration-color: lime;
+    display: block;
     padding: 1rem;
     margin-bottom: 1.25rem;
 }
@@ -23,12 +23,32 @@ input[type="text"], textarea, select {
     border: 1px solid darkgray;
     border-radius: .25rem;
     margin-bottom: 1.25rem;
-    padding: .75rem;
+    padding: 0.75rem;
+    font-size: 1rem;
+    background-color: white;
+}
+
+legend {
+    color: limegreen;
+    font-size: 1.25rem;
+    text-align: center;
+    font-weight: bold;
 }
 
 main {
     background-color: white;
-    width: 70%;
+    width: 55%;
     margin: 0 auto 1rem auto;
     padding: 0 1rem 2rem 1rem;
+}
+
+#submit-button {
+    width: 100%;
+    border: none;
+    background-color: rgb(76, 175, 80);
+    padding: 0.75rem 0.75rem;
+    border-radius: .25rem;
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
 }
