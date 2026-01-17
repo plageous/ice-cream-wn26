@@ -19,14 +19,14 @@
         <form id="ice-cream-form" action="#" method="get">
             
             <fieldset>
-            <legend>Personal information</legend>
+            <legend>Personal Information</legend>
             <!-- name -->
             <label for="name">Name:</label>
             <input type="text" id="name" name="name">
             
             <!-- email -->
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email">
+            <input type="text" id="email" name="email">
             </fieldset>
             
             <!-- order details -->
@@ -34,7 +34,7 @@
             <legend >Order Details </legend>
                 
             <!-- flavor -->
-            <label for="flavor"> Choose your flavor</label>
+            <label for="flavor">Choose your flavor:</label>
             <select id="flavor" name="flavor">
                 <option value="none">Select one</option> 
                 <option value="vanilla">Vanilla</option>
@@ -45,6 +45,8 @@
             <br>
 
             <!-- cone type -->
+            <label for="cone">Choose your cone:</label>
+            <br>
             <label for="wafflecone">
                 <input type="radio" id="wafflecone" value="wafflecone" name="method">Waffle Cone
             </label>
@@ -54,7 +56,7 @@
             <label for="cup">
                 <input type="radio" id="cup" value="cup" name="method">Cup                    
             </label>
-            <br>
+            <br><br>
                 
         
             <!-- toppings -->
@@ -71,7 +73,9 @@
             <label for="whipped cream">
                 <input type="checkbox" id="whipped cream" name="toppings[]" value="whipped cream">Whipped Cream
             </label>
-            <br>
+            <br><br>
+
+
             <!-- additional comments -->
             <label for="comments">Additional comments:</label>
             <textarea rows="5" id="comments" name="comments"></textarea>

@@ -10,10 +10,20 @@ body {
 
 fieldset {
     text-decoration-color: lime;
+    padding: 1rem;
+    margin-bottom: 1.25rem;
 }
 
 header {
     text-align: center;
+}
+
+input[type="text"], textarea, select {
+    width: 100%;
+    border: 1px solid darkgray;
+    border-radius: .25rem;
+    margin-bottom: 1.25rem;
+    padding: .75rem;
 }
 
 main {
