@@ -48,20 +48,19 @@ app.post('/submit-order', async (req, res) => {
 
         console.log('New order submitted:', order);
 
-        order.toppings = Array.isArray(order.toppings) ? order.toppings.join(", ") : "";
+        order.toppings = Array.isArray(order.toppings) ? order.toppings.join(", ") : " ";
 
-        const sql = `INSERT INTO orders(customer, email, flavor, cone toppings)
-                    VALUES (?, ?, ?, ?, ?);`;
+        const sql = `INSERT INTO orders(customer, email, flavor, cone, toppings) VALUES (?, ?, ?, ?, ?);`;
 
         const params = [
-            order.customer,
+            order.name,
             order.email,
             order.flavor,
-            order.cone,
+            order.method,
             order.toppings
         ];
 
-        const reult = await pool.execute(sql, params);
+        const result = await pool.execute(sql, params);
         console.log('Order saved with ID:', result[0].insertId);
 
         res.render('confirm', { order });
